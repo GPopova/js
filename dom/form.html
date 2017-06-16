@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Form</title>
+</head>
+<body>
+    <form name="form">
+        <input type="text" name="name">
+    </form>
+
+    <script>
+        document.forms.form.addEventListener('focus', focused, true);
+
+        document.forms.form.elements.name.onfocus = focused;
+
+        function focused(e) {
+            console.log('Focus');
+            console.log(e.currentTarget);
+            document.forms.form.removeEventListener('focus', focused, true);
+        }
+    </script>
+</body>
+</html>

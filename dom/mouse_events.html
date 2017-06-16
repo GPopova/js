@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Mouse events</title>
+    <style>
+        div {
+            height: 300px;
+            width: 300px;
+            border: 3px solid black;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        var div = document.body.firstElementChild;
+        div.onmousemove = function(e) {
+            console.log(e.type);
+        };
+
+        document.body.onmousedown = sayEvent;
+        document.body.onmouseup = sayEvent;
+        document.body.onclick = sayEvent;
+        document.body.ondblclick = sayEvent;
+        document.body.oncontextmenu = sayEvent;
+
+        function sayEvent(e) {
+            console.log(e.type);
+            console.log(e.which);
+        }
+    </script>
+</body>
+</html>

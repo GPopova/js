@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Keyboard events</title>
+</head>
+<body>
+    <script>
+        document.body.onkeydown = sayKeyboardEvent;
+        document.body.onkeypress = sayKeyboardEvent;
+        document.body.onkeyup = sayKeyboardEvent;
+
+        function sayKeyboardEvent(e) {
+            console.log(e.type);
+            console.log(e.keyCode);
+            console.log(String.fromCharCode(e.charCode));
+            console.log(e.shiftKey);
+            console.log(e.altKey);
+            console.log(e.ctrlKey);
+
+        }
+    </script>
+</body>
+</html>

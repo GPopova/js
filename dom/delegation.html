@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Delegation</title>
+</head>
+<body>
+    <div class="container">
+        <button>Click me!</button>
+    </div>
+    <div class="container">
+        <button>Another click!</button>
+    </div>
+
+    <script>
+        //Делегирование события
+        document.body.onclick = click;
+        var button = document.createElement('button');
+        button.textContent = "New button";
+        document.body.appendChild(button);
+        function click(e) {
+            if (e.target.tagName !== 'BUTTON') {
+                return;
+            }
+
+            alert(e.target.textContent);
+        }
+
+
+    </script>
+</body>
+</html>
