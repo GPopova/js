@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>JSON API</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form name="post">
+        <fieldset>
+            <legend>Get post</legend>
+            <input type="number" name="postId" min="1" max="100" value="1">
+            <button>Get Post</button>
+        </fieldset>
+    </form>
+    <div id="wrapper" hidden>
+        <div id="post"></div>
+        <p>Author: <span id="author"></span></p>
+        <details>
+            <summary>Post comments:</summary>
+            <div id="comments"></div>
+        </details>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
