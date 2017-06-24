@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        var str = "+38(097)123-45-78";
+        var regexCollection = {
+            phone: /^\+38\(\d{3}\)\d{3}-\d{2}-\d{2}$/
+        };
+        console.log(regexCollection.phone.test(str));
+    </script>
+</body>
+</html>
